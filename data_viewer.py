@@ -1,6 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import data
+import data.data as data
 
 playlists = data.get_playlists_df()
 tracks = data.get_tracks_df()
