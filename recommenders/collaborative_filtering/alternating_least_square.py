@@ -1,10 +1,13 @@
 import numpy as np
 import implicit # The Cython library
 from recommenders.recommender_base import RecommenderBase
+import scipy.sparse as sps
+from utils import log
 import data.data as data
 from inout.importexport import exportcsv
 import utils.log as log
 import time
+
 
 class AlternatingLeastSquare(RecommenderBase):
 
@@ -20,6 +23,24 @@ class AlternatingLeastSquare(RecommenderBase):
 
     [link text](http://www.example.com)
     """
+    def __init__(self, URM):
+        self.urm = URM
+        self.name = 'ALS'
+
+    def get_r_hat(self, load_from_file=False, path=''):
+        """
+        compute the r_hat for the model
+        :return  r_hat
+        """
+        if load_from_file:
+            r_hat = sps.load_npz(path)
+        else:
+            if self.user_vecs is None:
+                log.error('the recommender has not been trained, call the fit() method')
+            s_user_vecs = sps.csr_matrix(self.user_vecs)
+            s_item_vecs_t = sps.csr_matrix(self.item_vecs.T)
+            r_hat = s_user_vecs.dot(s_item_vecs_t)
+        return r_hat
 
     def fit(self, urm_train, factors=100, regularization=0.01, iterations=100, alpha=25):
         """
