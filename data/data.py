@@ -19,9 +19,9 @@ _TARGET_PLAYLISTS_PATH = '/kaggle/input/target_playlists.csv'
 
 _URM_PATH = '/kaggle/input/sp_urm.npz'
 
-_URM_TRAIN_PATH = '/kaggle/input/sp_urm_train_MAP.npz'
+_URM_TRAIN_PATH = '/kaggle/input/urm_train.npz'
 
-_URM_TEST_PATH = '/kaggle//input/sp_urm_test_MAP.npz'
+_URM_TEST_PATH = '/kaggle/input/urm_test.npz'
 
 _ICM_PATH = '/kaggle/input/sp_icm.npz'
 
