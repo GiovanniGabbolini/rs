@@ -9,21 +9,21 @@ import pandas as pd
 PATHS 
 """
 # || track_id || album_id || artist_id || duration_sec
-_TRACKS_PATH = 'raw_data/original_csv/tracks.csv'
+_TRACKS_PATH = '/kaggle/input/tracks.csv'
 
 # || playlist_id || track_id ||
-_PLAYLISTS_PATH = 'raw_data/original_csv/train.csv'
+_PLAYLISTS_PATH = '/kaggle/input/train.csv'
 
 # || playlist_id ||
-_TARGET_PLAYLISTS_PATH = 'raw_data/original_csv/target_playlists.csv'
+_TARGET_PLAYLISTS_PATH = '/kaggle/input/target_playlists.csv'
 
-_URM_PATH = '../input/sp_urm.npz'
+_URM_PATH = '/kaggle/input/sp_urm.npz'
 
-_URM_TRAIN_PATH = '../input/sp_urm_train_MAP.npz'
+_URM_TRAIN_PATH = '/kaggle/input/sp_urm_train_MAP.npz'
 
-_URM_TEST_PATH = '../input/sp_urm_test_MAP.npz'
+_URM_TEST_PATH = '/kaggle//input/sp_urm_test_MAP.npz'
 
-_ICM_PATH = '../input/sp_icm.npz'
+_ICM_PATH = '/kaggle/input/sp_icm.npz'
 
 
 #sparse_matrices CSR format
