@@ -44,6 +44,12 @@ class CollaborativeFiltering(DistanceBasedRecommender):
         """
         super(CollaborativeFiltering, self).fit(urm_train, k, distance, shrink, threshold, implicit, alpha, beta, l, c)
 
+    # def get_r_hat(self):
+    #     """
+    #     Return the r_hat matrix as: R^ = R•S ONLY for the TARGET USERS
+    #     """
+    #     return super(CollaborativeFiltering, self).get_r_hat()
+
     def run(self, distance, urm_train=None, urm=None, urm_test=None, targetids=None, k=100, shrink=10, threshold=0, implicit=True,
         alpha=None, beta=None, l=None, c=None, with_scores=False, export=True, verbose=True):
         """
