@@ -17,13 +17,13 @@ _PLAYLISTS_PATH = 'raw_data/original_csv/train.csv'
 # || playlist_id ||
 _TARGET_PLAYLISTS_PATH = 'raw_data/original_csv/target_playlists.csv'
 
-_URM_PATH = 'raw_data/matrices/urm.npz'
+_URM_PATH = '../input/sp_urm.npz'
 
-_URM_TRAIN_PATH = 'raw_data/matrices/urm_train.npz'
+_URM_TRAIN_PATH = '../input/sp_urm_train_MAP.npz'
 
-_URM_TEST_PATH = 'raw_data/matrices/urm_test.npz'
+_URM_TEST_PATH = '../input/sp_urm_test_MAP.npz'
 
-_ICM_PATH = 'raw_data/matrices/icm.npz'
+_ICM_PATH = '../input/sp_icm.npz'
 
 
 #sparse_matrices CSR format
