@@ -162,8 +162,8 @@ class ContentBasedRecommender(DistanceBasedRecommender):
             self.save_r_hat()
         return recs, map
 
-    def validate(self, urm=d.get_urm_train(), icm=d.get_icm(), urm_test=d.get_urm_test(),
-                 targetids=d.get_target_playlists(),distance=[DistanceBasedRecommender.SIM_SPLUS], k=[100], shrink=[0],
+    def validate(self, urm, icm, urm_test,
+                 targetids,distance=[DistanceBasedRecommender.SIM_SPLUS], k=[100], shrink=[0],
                  threshold=[0], alpha=[0.5],
                  beta=[0.5], l=[0.5], c=[0.5], log_path=None):
 
