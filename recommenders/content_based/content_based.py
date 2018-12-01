@@ -162,7 +162,9 @@ class ContentBasedRecommender(DistanceBasedRecommender):
             self.save_r_hat()
         return recs, map
 
-    def validate(self, distance=[DistanceBasedRecommender.SIM_SPLUS], k=[100], shrink=[0], threshold=[0], alpha=[0.5],
+    def validate(self, urm=d.get_urm_train(), icm=d.get_icm(), urm_test=d.get_urm_test(),
+                 targetids=d.get_target_playlists(),distance=[DistanceBasedRecommender.SIM_SPLUS], k=[100], shrink=[0],
+                 threshold=[0], alpha=[0.5],
                  beta=[0.5], l=[0.5], c=[0.5], log_path=None):
 
         if log_path != None:
@@ -180,10 +182,10 @@ class ContentBasedRecommender(DistanceBasedRecommender):
                                 for l_ in l:
                                     for c_ in c:
                                         self.run(dist,
-                                                 urm=d.get_urm_train(),
-                                                 icm=d.get_icm(),
-                                                 urm_test=d.get_urm_test(),
-                                                 targetids=d.get_target_playlists(),
+                                                 urm=urm,
+                                                 icm=icm,
+                                                 urm_test=urm_test,
+                                                 targetids=targetids,
                                                  k=k_,
                                                  shrink=s,
                                                  threshold=t,
