@@ -106,18 +106,18 @@ class ContentBasedRecommender(DistanceBasedRecommender):
         recs: (list) recommendations
         map10: (float) MAP10 for the provided recommendations
         """
-        _urm = data.get_urm_train()
-        _icm = data.get_icm()
-        _urm_test = data.get_urm_test()
-        _targetids = data.get_target_playlists()
+        # _urm = data.get_urm_train()
+        # _icm = data.get_icm()
+        # _urm_test = data.get_urm_test()
+        # _targetids = data.get_target_playlists()
         #_targetids = data.get_all_playlists()
 
         start = time.time()
 
-        urm = _urm if urm is None else urm
-        icm = _icm if icm is None else icm
-        urm_test = _urm_test if urm_test is None else urm_test
-        targetids = _targetids if targetids is None else targetids
+        # urm = _urm if urm is None else urm
+        # icm = _icm if icm is None else icm
+        # urm_test = _urm_test if urm_test is None else urm_test
+        # targetids = _targetids if targetids is None else targetids
 
         self._print(distance, k, shrink, threshold, alpha, beta, l, c)
 
