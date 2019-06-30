@@ -7,7 +7,7 @@ Complete suite of implementations of Recommendation Algorithms. The modularity o
 We were given a 1.2M interactions dataset about playlists and songs. Our goal was predicting the most suited song for continuing the playlist.
 
 ### Results
-My team ranked fifth over eighty teams (top 7%)
+Our team ranked fifth over eighty teams (top 7%)
 
 ### Link
 https://www.kaggle.com/c/recommender-system-2018-challenge-polimi
